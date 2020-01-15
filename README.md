@@ -5,14 +5,11 @@
 
 
 
-## AlphaPose
+## AlphaPose (Old Version)
 [Alpha Pose](http://www.mvig.org/research/alphapose.html) is an accurate multi-person pose estimator, which is the **first real-time** open-source system that achieves **70+ mAP (72.3 mAP)** on COCO dataset and **80+ mAP (82.1 mAP)** on MPII dataset.** 
 To match poses that correspond to the same person across frames, we also provide an efficient online pose tracker called Pose Flow. It is the **first open-source online pose tracker that achieves both 60+ mAP (66.5 mAP) and 50+ MOTA (58.3 MOTA) on PoseTrack Challenge dataset.**
 
 
-## News!
-- Dec 2018: [General version](https://github.com/MVIG-SJTU/AlphaPose/tree/master/PoseFlow) of PoseFlow is released! 3X Faster and support pose tracking results visualization!
-- Sep 2018: [**PyTorch** version](https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch) of AlphaPose is released! It runs at **20 fps** on COCO validation set (4.6 people per image on average) and achieves 71 mAP!
 
 ## Contents
 - [AlphaPose](#alphapose)
@@ -94,7 +91,7 @@ Results on PoseTrack Challenge validation set:
 ## Installation
 1. Get the code and build related modules.
   ```Shell
-  git clone https://github.com/MVIG-SJTU/AlphaPose.git
+  git clone https://github.com/ZhengZerong/AlphaPose.git
   cd AlphaPose/human-detection/lib/
   make clean
   make
