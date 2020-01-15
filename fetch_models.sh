@@ -1,10 +1,10 @@
 cd human-detection
-wget mvig.sjtu.edu.cn/publications/rmpe/output.zip
+wget https://github.com/ZhengZerong/AlphaPose/releases/download/v0.0/output.zip
 unzip output.zip
 rm output.zip
 cd ../predict
 mkdir models
 cd models
-wget mvig.sjtu.edu.cn/publications/rmpe/final_model.t7
+wget https://github.com/ZhengZerong/AlphaPose/releases/download/v0.0/final_model.t7
 cd ../..
 
