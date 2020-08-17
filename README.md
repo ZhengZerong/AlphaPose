@@ -15,9 +15,6 @@ To match poses that correspond to the same person across frames, we also provide
 - [AlphaPose](#alphapose)
 - [News!](#news)
 - [Contents](#contents)
-- [Results](#results)
-  - [Pose Estimation](#pose-estimation)
-  - [Pose Tracking](#pose-tracking)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Output](#output)
@@ -27,66 +24,6 @@ To match poses that correspond to the same person across frames, we also provide
 - [Citation](#citation)
 - [License](#license)
 
-
-
-## Results
-### Pose Estimation
-<p align="center">
-    <img src="doc/pose.gif", width="360">
-</p>
-
-Results on COCO test-dev 2015:
-<center>
-
-| Method | AP @0.5:0.95 | AP @0.5 | AP @0.75 | AP medium | AP large |
-|:-------|:-----:|:-------:|:-------:|:-------:|:-------:|
-| OpenPose (CMU-Pose) | 61.8 | 84.9 | 67.5 | 57.1 | 68.2 |
-| Detectron (Mask R-CNN) | 67.0 | 88.0 | 73.1 | 62.2 | 75.6 |
-| **AlphaPose** | **72.3** | **89.2** | **79.1** | **69.0** | **78.6** |
-
-</center>
-
-Results on MPII full test set:
-<center>
-
-| Method | Head | Shoulder | Elbow | Wrist | Hip | Knee | Ankle | Ave |
-|:-------|:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| OpenPose (CMU-Pose) | 91.2 | 87.6 | 77.7 | 66.8 | 75.4 | 68.9 | 61.7 | 75.6 |
-| Newell & Deng | **92.1** | 89.3 | 78.9 | 69.8 | 76.2 | 71.6 | 64.7 | 77.5 |
-| **AlphaPose** | 91.3 | **90.5** | **84.0** | **76.4** | **80.3** | **79.9** | **72.4** | **82.1** |
-
-</center>
-
-### Pose Tracking
-<p align='center'>
-    <img src="doc/posetrack.gif", width="360">
-    <img src="doc/posetrack2.gif", width="344">
-</p>
-
-Results on PoseTrack Challenge validation set:
-
-1. Task2: Multi-Person Pose Estimation (mAP)
-<center>
-
-| Method | Head mAP | Shoulder mAP | Elbow mAP | Wrist mAP | Hip mAP | Knee mAP | Ankle mAP | Total mAP |
-|:-------|:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| Detect-and-Track(FAIR) | **67.5** | 70.2 | 62 | 51.7 | 60.7 | 58.7 | 49.8 | 60.6 |
-| **AlphaPose** | 66.7 | **73.3** | **68.3** | **61.1** | **67.5** | **67.0** | **61.3** | **66.5** |
-
-</center>
-
-2. Task3: Pose Tracking (MOTA)
-<center>
-
-| Method | Head MOTA | Shoulder MOTA | Elbow MOTA | Wrist MOTA | Hip MOTA | Knee MOTA | Ankle MOTA | Total MOTA | Total MOTP| Speed(FPS) |
-|:-------|:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| Detect-and-Track(FAIR) | **61.7** | 65.5 | 57.3 | 45.7 | 54.3 | 53.1 | 45.7 | 55.2 | 61.5 |Unknown|
-| **PoseFlow(DeepMatch)** | 59.8 | **67.0** | 59.8 | 51.6 | **60.0** | **58.4** | **50.5** | **58.3** | **67.8**|8|
-| **PoseFlow(OrbMatch)** | 59.0 | 66.8 | **60.0** | **51.8** | 59.4 | **58.4** | 50.3 | 58.0 | 62.2|24|
-
-</center>
-
-*Note: Please read [PoseFlow/README.md](PoseFlow/) for details.*
 
 ## Installation
 1. Get the code and build related modules.
@@ -98,8 +35,10 @@ Results on PoseTrack Challenge validation set:
   cd newnms/
   make
   cd ../../../
-  ```
-2. Install [Torch](https://github.com/torch/distro) and [TensorFlow](https://www.tensorflow.org/install/)(verson >= 1.2). After that, install related dependencies by:
+```
+
+2. Install [Torch](https://github.com/torch/distro) and [TensorFlow](https://www.tensorflow.org/install/)(verson >= 1.2). 
+You may also need to install cudnn.torch to resolve compatibility issues; see [this link](https://github.com/soumith/cudnn.torch/issues/383#issuecomment-339171131) for more details. After that, install related dependencies by:
   ```Shell
   chmod +x install.sh
   ./install.sh
